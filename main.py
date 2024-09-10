@@ -1,50 +1,28 @@
 import random
 
-def Intro():
-  print("--- Taschenrechner ---")
-  print("Willkommen zum Taschenrechner, bitte gebe an was du machen willst.")
-  print("\n1. Zufallszahl\n2. Taschenrechner\n3. Irgendwas\n4. Programm stoppen")
+print("--- Taschenrechner ---")
+print("Willkommen zum Taschenrechner, bitte gebe an was du machen willst.")
+print("\n1. Zufallszahl\n2. Taschenrechner\n3. Irgendwas\n4. Programm stoppen")
 
-  toolSelect()
+tool = input("Worauf hast du lust? ")
 
-def toolSelect():
-  tool=input("Worauf hast du lust? ")
+if tool == str(1):
+  numOne = int(input("Gebe eine Zahl ein: "))
+  numTow = int(input("Gebe eine Zahl ein: "))
+  randomNumber = random.randint(numOne, numTow)
+  print(randomNumber)
+
+elif tool == str(2):
+  print("aschenrechner")
   
-  if tool == 1:
-    Zufallszahl()
-  elif tool == 2:
-    Taschenrechner()
-  elif tool == 3:
-    Irgendwas()
-  elif tool == 4:
-    ProgrammStop()
-
-  else:
-    print("---")
-    print("Bitte gebe eine Valide eingabe ab!")
-    toolSelect()
-
-
-
-
-
-
-def Zufallszahl():
-  print("true")
-
-def Taschenrechner():
-  print("true")
-
-def Irgendwas():
-  print("true")
-
-def ProgrammStop():
+elif tool == str(3):
+  print()
+  
+elif tool == str(4):
+  print("Bis zum nächsten mal!")
   exit()
+  
 
-def ui():
-  print("true")
-
-def end():
-  print("true")
-
-Intro()
+else:
+  print("---")
+  print("Bitte gebe eine Valide eingabe ab!")
